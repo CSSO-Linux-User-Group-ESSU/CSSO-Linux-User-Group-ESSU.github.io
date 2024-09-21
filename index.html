@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-gray-100 min-h-screen flex flex-col">
-    <header class="bg-white shadow">
-        <nav class="container mx-auto px-6 py-3">
-            <div class="flex items-center justify-between">
-                <div class="text-xl font-semibold text-gray-700">Computer Science Student Organization</div>
-                <div class="hidden md:flex space-x-4">
-                    <a class="text-gray-600 hover:text-gray-900" href="/">Home</a>
-                    <a class="text-gray-600 hover:text-gray-900" href="{{ route('faculties') }}">Members</a>
-                    <a class="text-gray-600 hover:text-gray-900" href="{{ route('announce') }}">Announcement</a>
+<body class="body-container">
+    <header style="background-color: white;">
+        <nav class="nav-container">
+            <div class="navigation">
+                <div class="nav-text">Computer Science Student Organization</div>
+                <div class="nav-content-container">
+                    <a class="nav-content" href="/">Home</a>
+                    <a class="nav-content" href="/">Members</a>
+                    <a class="nav-content" href="/" style="margin-right: 10%;">Announcement</a>
                 </div>
-                <div class="md:hidden">
+                <!-- <div class="md:hidden">
                     <button class="text-gray-600 hover:text-gray-900 focus:outline-none">
                         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                             xmlns="http://www.w3.org/2000/svg">
@@ -26,151 +26,134 @@
                                 d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg>
                     </button>
-                </div>
+                </div> -->
             </div>
         </nav>
     </header>
-    <main class="flex-grow">
-        <div class="container mx-auto p-4">
-            <h1 class="text-2xl font-bold mb-4">Members</h1>
-
-            <div class="flex flex-col items-center">
-                <!-- CEO -->
-                <div class="flex flex-col items-center mb-8">
-                    <img src="president.jpg" alt="Mark Davis"
-                        class="w-24 h-24 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-48">
-                        <p class="font-bold text-center text-black">Arnel Borja Jr.</p>
-                        <p class="text-sm text-center text-black">President</p>
+    <main>
+        <div class="main-container">
+            <h1 class="members-text">Get to know the Officers!</h1>
+            <div class="members-container">
+                <div class="members-container member-data">
+                    <img src="president.jpg" alt="Arnel Borja Jr." class="member-image">
+                    <div class="">
+                        <p class="member-name">Arnel Borja Jr.</p>
+                        <p class="member-position">President</p>
                     </div>
                 </div>
-                <div class="flex justify-center w-full">
-                    <div class="flex flex-col items-center mx-4">
-                        <img src="vice_pres.jpg" alt="Margot Yusifona"
-                            class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                        <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                            <p class="font-bold text-center text-black">Gabriel Montes</p>
-                            <p class="text-sm text-center text-black">Vice President</p>
+                <div class="member2">
+                    <div class="members-container">
+                        <img src="vice_pres.jpg" alt="Gabriel Montes" class="member-image img-sm">
+                        <div class="text-container">
+                            <p class="member-name">Gabriel Montes</p>
+                            <p class="member-position">Vice President</p>
                         </div>
                     </div>
-                    <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                    <div class="flex flex-col items-center mx-4">
-                        <img src="secretary.jpg" alt="Paul Keith"
-                            class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                        <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                            <p class="font-bold text-center text-black">Monica Galupe</p>
-                            <p class="text-sm text-center text-black">Secretary</p>
+                    <div class="members-container">
+                        <img src="secretary.jpg" alt="Monica Galupe" class="member-image img-sm">
+                        <div class="text-container">
+                            <p class="member-name">Monica Galupe</p>
+                            <p class="member-position">Secretary</p>
                         </div>
                     </div>
-                    <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                    <div class="flex flex-col items-center mx-4">
-                        <img src="assistant_sec.png" alt="Ann Leroy"
-                            class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                        <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                            <p class="font-bold text-center text-black">Kathlyn Grace Villasin</p>
-                            <p class="text-sm text-center text-black">Assistant Secretary</p>
+                    <div class="members-container">
+                        <img src="assistant_sec.png" alt="Kathlyn Grace Villasin" class="member-image img-sm">
+                        <div class="text-container">
+                            <p class="member-name">Kathlyn Grace Villasin</p>
+                            <p class="member-position">Assistant Secretary</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center w-full">
-                <div class="flex flex-col items-center mx-4">
+            <div class="member2">
+                <div class="members-container">
                     <img src="treasurer.jpg" alt="Margot Yusifona"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">Quennie Ghia</p>
-                        <p class="text-sm text-center text-black">Treasurer</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">Quennie Ghia</p>
+                        <p class="member-position">Treasurer</p>
                     </div>
                 </div>
-                <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                <div class="flex flex-col items-center mx-4">
+                <div class="members-container">
                     <img src="auditor.jpg" alt="Paul Keith"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">Allyville Gwen Yu</p>
-                        <p class="text-sm text-center text-black">Auditor</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">Allyville Gwen Yu</p>
+                        <p class="member-position">Auditor</p>
                     </div>
                 </div>
-                <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                <div class="flex flex-col items-center mx-4">
+                <div class="members-container">
                     <img src="PRO.jpg" alt="Ann Leroy"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">Neil Bryan Caranzo</p>
-                        <p class="text-sm text-center text-black">P.R.O</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">Neil Bryan Caranzo</p>
+                        <p class="member-position">P.R.O</p>
                     </div>
                 </div>
-                <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                <div class="flex flex-col items-center mx-4">
+                <div class="members-container">
                     <img src="business_manager_1.jpeg" alt="Ann Leroy"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">Davon Argel Aseo</p>
-                        <p class="text-sm text-center text-black">Business Manager</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">Davon Argel Aseo</p>
+                        <p class="member-position">Business Manager</p>
                     </div>
                 </div>
-                <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                <div class="flex flex-col items-center mx-4">
+                <div class="members-container">
                     <img src="business_manager_2.jpg" alt="Ann Leroy"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">Darren David Uy</p>
-                        <p class="text-sm text-center text-black">Business Manager</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">Darren David Uy</p>
+                        <p class="member-position">Business Manager</p>
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center w-full">
-                <div class="flex flex-col items-center mx-4">
+            <div class="member2">
+                <div class="members-container">
                     <img src="peace_officer_2.jpg" alt="Margot Yusifona"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">John Emmanuel Penido</p>
-                        <p class="text-sm text-center text-black">Peace Officer</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">John Emmanuel Penido</p>
+                        <p class="member-position">Peace Officer</p>
                     </div>
                 </div>
-                <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                <div class="flex flex-col items-center mx-4">
+                <div class="members-container">
                     <img src="peace_officer_1.jpg" alt="Paul Keith"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">Earnest Carl Libanan</p>
-                        <p class="text-sm text-center text-black">Peace Officer</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">Earnest Carl Libanan</p>
+                        <p class="member-position">Peace Officer</p>
                     </div>
                 </div>
-                <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                <div class="flex flex-col items-center mx-4">
+                <div class="members-container">
                     <img src="1st_year_rep.jpg" alt="Ann Leroy"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">Aaron Ramirez</p>
-                        <p class="text-sm text-center text-black">1st Year Representative</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">Aaron Ramirez</p>
+                        <p class="member-position">1st Year Representative</p>
                     </div>
                 </div>
-                <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                <div class="flex flex-col items-center mx-4">
+                <div class="members-container">
                     <img src="2nd_year_rep.jpg" alt="Ann Leroy"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">Eureka Mengullo</p>
-                        <p class="text-sm text-center text-black">2nd Year Representative</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">Eureka Mengullo</p>
+                        <p class="member-position">2nd Year Representative</p>
                     </div>
                 </div>
-                <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                <div class="flex flex-col items-center mx-4">
+                <div class="members-container">
                     <img src="3rd_year_rep.jpg" alt="Ann Leroy"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">Shanilla Anonuevo</p>
-                        <p class="text-sm text-center text-black">3rd Year Representative</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">Shanilla Anonuevo</p>
+                        <p class="member-position">3rd Year Representative</p>
                     </div>
                 </div>
-                <div class="w-8 self-start mt-8 border-t border-gray-300"></div>
-                <div class="flex flex-col items-center mx-4">
+                <div class="members-container">
                     <img src="4th_year_rep.jpg" alt="Ann Leroy"
-                        class="w-16 h-16 rounded-full border-4 border-cyan-300 mb-2">
-                    <div class="bg-cyan-300 text-white p-2 rounded w-40">
-                        <p class="font-bold text-center text-black">Joshua Paez</p>
-                        <p class="text-sm text-center text-black">4th Year Representative</p>
+                        class="member-image img-sm">
+                    <div class="text-container">
+                        <p class="member-name">Joshua Paez</p>
+                        <p class="member-position">4th Year Representative</p>
                     </div>
                 </div>
             </div>
